@@ -6,10 +6,32 @@ export const site = {
   name: "Hisham Ahmad",
   shortName: "Hisham",
   eyebrow: "Computer Science · Sheridan College · Third year",
-  headline: {
-    lead: "I build software for problems I've",
-    emphasis: "actually worked inside.",
+  /** Two lines of the hero name. The second line is set in italic accent. */
+  nameLines: ["Hisham", "Ahmad"],
+
+  /** Short, true lines that rotate under the name. Keep each under ~45 characters. */
+  roles: [
+    "Computer Science student at Sheridan College",
+    "Building InnPilot, a motel operations app",
+    "AI code evaluator at Outlier",
+    "Cybersecurity consulting intern, 2026",
+  ],
+
+  /**
+   * Your photo. Drop a file into /public (e.g. public/portrait.jpg) and set src to "/portrait.jpg".
+   * While src is empty, a labelled placeholder frame is shown instead.
+   */
+  portrait: {
+    src: "",
+    alt: "Hisham Ahmad",
   },
+
+  /** Small labels that float around the portrait. Keep them true and short. */
+  orbitTags: ["InnPilot", "AppSec", "Data Analytics"],
+
+  /** One sentence beside the name. The longer intro lives below. */
+  tagline:
+    "I build practical software for problems I've worked inside, with security and code quality as part of the build.",
   intro:
     "Third-year Computer Science student at Sheridan College, specializing in Data Analytics. I write practical software, treat security as part of the build rather than a checkbox, and can explain why a piece of code is good or not.",
   lookingFor:

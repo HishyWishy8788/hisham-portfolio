@@ -3,6 +3,7 @@ import { site } from "../content/site";
 import { projects } from "../content/projects";
 import { experience } from "../content/experience";
 import { ProjectCard } from "../components/ProjectCard";
+import { Hero } from "../components/Hero";
 import { useDocumentTitle } from "../components/useDocumentTitle";
 
 const principles = [
@@ -27,28 +28,20 @@ export function Home() {
 
   return (
     <>
-      <section className="hero wrap" aria-labelledby="hero-title">
-        <p className="eyebrow mono">{site.eyebrow}</p>
-        <h1 className="hero__title" id="hero-title">
-          {site.headline.lead} <em>{site.headline.emphasis}</em>
-        </h1>
-        <div className="hero__grid">
-          <div className="hero__intro">
-            <p className="lead">{site.intro}</p>
-            <p className="hero__looking">{site.lookingFor}</p>
-          </div>
-          <dl className="ledger" aria-label="Currently">
-            {site.now.map((row, i) => (
-              <div className="ledger__row" key={row.label}>
-                <dt className="mono">
-                  {i === 0 && <span className="pulse" aria-hidden="true" />}
-                  {row.label}
-                </dt>
-                <dd>{row.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+      <Hero />
+
+      <section className="now wrap" aria-label="Currently">
+        <dl className="ledger">
+          {site.now.map((row, i) => (
+            <div className="ledger__row" key={row.label}>
+              <dt className="mono">
+                {i === 0 && <span className="pulse" aria-hidden="true" />}
+                {row.label}
+              </dt>
+              <dd>{row.value}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="section wrap" id="work" aria-labelledby="work-title">
