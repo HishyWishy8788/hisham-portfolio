@@ -22,7 +22,7 @@ export const site = {
    * While src is empty, a labelled placeholder frame is shown instead.
    */
   portrait: {
-    src: "",
+    src: "/portrait.jpg",
     alt: "Hisham Ahmad",
   },
 
@@ -53,9 +53,9 @@ export const site = {
 
   /** Fill these in. Empty strings are hidden. */
   links: {
-    email: "",
-    linkedin: "",
-    github: "",
+    email: "hishamahmadxx87@gmail.com",
+    linkedin: "https://www.linkedin.com/in/hisham-ahmad-147695244/",
+    github: "https://github.com/HishyWishy8788",
   },
 };
 

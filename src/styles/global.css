@@ -464,6 +464,8 @@ em {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Face sits in the upper part of the photo; keep it centred in the circle. */
+  object-position: 50% 30%;
 }
 
 .portrait-placeholder {
