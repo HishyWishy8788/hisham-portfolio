@@ -14,6 +14,10 @@ export function Hero() {
   const reduced = usePrefersReducedMotion();
   const { email, linkedin } = site.links;
   const [first, second] = site.nameLines;
+  // Absolute paths in content are resolved against the deploy base path.
+  const portraitSrc = site.portrait.src.startsWith("/")
+    ? import.meta.env.BASE_URL + site.portrait.src.slice(1)
+    : site.portrait.src;
 
   useEffect(() => {
     const el = ref.current;
@@ -90,7 +94,7 @@ export function Hero() {
           <div className="portrait-frame">
             {site.portrait.src ? (
               <img
-                src={site.portrait.src}
+                src={portraitSrc}
                 alt={site.portrait.alt}
                 width={420}
                 height={420}
